@@ -1,13 +1,22 @@
 <div class="container">
-    <div class="row">
+    <div class="row mt-3">
         <div class="col-md-6">
             <h1>Quotes</h1>
             <hr>
-            <ul>
-                <li *ngFor='let quo of quotes'>
-                    {{quo.quote}}
-                </li>
-            </ul>
+                <div *ngFor='let quo of quotes'>
+                    <div class="card mt-3">
+                        <div class="card-header text-white bg-warning">
+                            User: Paul
+                        </div>
+                        <div class="card-body">
+                            <h5>{{quo.quote}}</h5>
+                        </div>
+                        <div class="card-footer">
+                            <div class="text-muted">Author: </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-outline-danger mt-2">Delete Quote</button>
+                </div>
         </div>
         <div class="col-md-6">
             <app-quote-form></app-quote-form>
