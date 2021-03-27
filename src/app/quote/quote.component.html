@@ -4,18 +4,27 @@
             <h1>Quotes</h1>
             <hr>
                 <div *ngFor='let quo of quotes'>
-                    <div class="card mt-3">
-                        <div class="card-header text-white bg-warning">
-                            User: {{quo.username}}
-                        </div>
-                        <div class="card-body">
-                            <h5>{{quo.quote}}</h5>
-                        </div>
-                        <div class="card-footer">
-                            <div class="text-muted">Author: {{quo.author}}</div>
+                    <div class="row">
+                        <div class="col-md-12 p-3">
+                            <p>{{quo.quote}}</p> <br>
+                            <button type="submit" class="btn btn-outline-info">View Details</button>
+                            <div class="card mt-2">
+                                <div class="card-header">
+                                    <h5>Posted by {{quo.username}}</h5>
+                                </div>
+                                <div class="card-body">
+                                    <h4>{{quo.quote}}</h4>
+                                    <p>{{quo.author}}</p>
+                                    <small class="text-muted">Posted 0 min ago</small>
+                                </div>
+                                <div class="card-footer">
+                                    <button type="submit" class="btn btn-outline-success ml-2">Upvote 0</button>
+                                    <button type="submit" class="btn btn-outline-warning ml-2">Downvote 0</button>
+                                    <button type="submit" class="btn btn-outline-danger ml-2">Delete Quote</button>
+                                </div>
+                            </div>  
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-outline-danger mt-2">Delete Quote</button>
                 </div>
         </div>
         <div class="col-md-6">
