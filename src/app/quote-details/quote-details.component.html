@@ -1,3 +1,15 @@
-<p>
-    {{quote.author}}
-</p>
+<div class="card mt-2">
+    <div class="card-header">
+        <h5>Posted by {{quote.username}}</h5>
+    </div>
+    <div class="card-body">
+        <h4>{{quote.quote}}</h4>
+        <p>{{quote.author}}</p>
+        <small class="text-muted">Posted 0 min ago</small>
+    </div>
+    <div class="card-footer">
+        <button type="submit" class="btn btn-outline-success ml-2">Upvote 0</button>
+        <button type="submit" class="btn btn-outline-warning ml-2">Downvote 0</button>
+        <button type="submit" class="btn btn-outline-danger ml-2">Delete Quote</button>
+    </div>
+</div>  
