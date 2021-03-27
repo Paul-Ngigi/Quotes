@@ -1,25 +1,37 @@
 <div class="container">
     <h1 class="text-center">Create a new Goal</h1>
     <hr>
-    <form>
+    <form (ngSubmit)="submitQuote()" #quoteForm='ngForm'>
         <div class="form-group">
-  
-            <label for="name">Username</label>
-            <input type="text" required class="form-control" id="username">
-  
+
+            <label for="username">Username</label>
+            <input type="text" required class="form-control" id="username" [(ngModel)]="newQuote.username"
+                name="username" #username='ngModel' required>
+            <div [hidden]="username.valid || username.pristine" class="alert alert-danger">
+                <p>Your username is required</p>
+            </div>
+
         </div>
         <div class="form-group">
-  
-            <label for="name">Quote</label>
-            <input type="text" required class="form-control" id="name">
-  
+
+            <label for="quote">Quote</label>
+            <input type="text" required class="form-control" id="name" id="username" [(ngModel)]="newQuote.quote"
+            name="quote" #quote='ngModel' required>
+            <div [hidden]="quote.valid || quote.pristine" class="alert alert-danger">
+                <p>A quote is required</p>
+            </div>
+
         </div>
         <div class="form-group">
-  
-            <label for="name">Author</label>
-            <input type="text" required class="form-control" id="author">
-  
+
+            <label for="author">Author</label>
+            <input type="text" required class="form-control" id="author" id="author" [(ngModel)]="newQuote.author"
+            name="author" #author='ngModel' required>
+            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
+                <p>Author's name is required</p>
+            </div>
+
         </div>
         <button type="submit" class="btn btn-outline-primary">Add Quote</button>
     </form>
-  </div>
+</div>
