@@ -8,7 +8,7 @@
                         <div class="col-md-12 p-3">
                             <h3>{{quote.quote}}</h3> <br>
                             <button type="submit" class="btn btn-outline-info" (click)='toggleDetails(i)'>View Details</button>
-                            <app-quote-details *ngIf='quote.showMore' [quote] = 'quote'></app-quote-details>
+                            <app-quote-details *ngIf='quote.showMore' [quote] = 'quote' (isComplete) = 'deleteGoal($event,i)'></app-quote-details>
                         </div>
                     </div>
                 </div>
