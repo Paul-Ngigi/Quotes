@@ -1,5 +1,5 @@
 <div class="card mt-2">
-    <div class="card-header">
+    <div class="card-header bg-dark text-white">
         <h5>Posted by {{quote.username}}</h5>
     </div>
     <div class="card-body">
@@ -7,7 +7,7 @@
         <p>{{quote.author}}</p>
         <small class="text-muted">Posted {{quote.date | timeSince}} </small>
     </div>
-    <div class="card-footer">
+    <div class="card-footer bg-dark text-white">
         <button type="submit" class="btn btn-outline-success ml-2"
         (click)="upVoteQuote(quote)">Upvotes: {{quote.upVotes}}</button>
         <button type="submit" class="btn btn-outline-warning ml-2"
