@@ -5,11 +5,13 @@
     <div class="card-body">
         <h4>{{quote.quote}}</h4>
         <p>{{quote.author}}</p>
-        <small class="text-muted">Posted 0 min ago</small>
+        <small class="text-muted">Posted {{quote.date | timeSince}} </small>
     </div>
     <div class="card-footer">
-        <button type="submit" class="btn btn-outline-success ml-2">Upvote 0</button>
-        <button type="submit" class="btn btn-outline-warning ml-2">Downvote 0</button>
+        <button type="submit" class="btn btn-outline-success ml-2"
+        (click)="upVoteQuote(quote)">Upvotes: {{quote.upVotes}}</button>
+        <button type="submit" class="btn btn-outline-warning ml-2"
+        (click)="downVoteQuote(quote)">Downvotes: {{quote.downVotes}}</button>
         <button type="submit" class="btn btn-outline-danger ml-2" (click)= 'quoteDelete(true)'>Delete Quote</button>
     </div>
 </div>  

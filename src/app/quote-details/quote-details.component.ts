@@ -18,4 +18,11 @@ export class QuoteDetailsComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  upVoteQuote(quote:Quote) { 
+    quote.upVotes += 1;
+  }
+
+  downVoteQuote(quote:Quote) { 
+    quote.downVotes += 1;
+  }
 }

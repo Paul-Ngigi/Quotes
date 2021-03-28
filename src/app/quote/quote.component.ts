@@ -8,11 +8,15 @@ import { Quote } from '../quote'
 })
 export class QuoteComponent implements OnInit {
   quotes: Quote[] = [
-    new Quote(1,"One day I will find the right words, and they will be simple","Paul Ngigi",'"Jack Kerouac"'),
-    new Quote(2,"Let me live, love, and say it well in good sentences","Ashley Wanjiru",'"Sylvia Plath"'),
-    new Quote(3,"The first draft is just you telling yourself the story","Stephen Kariuki",'"Terry Pratchett"'),
-    new Quote(4,"Start before you’re ready","Mary Wangui",'"Steven Pressfield"'),
-    new Quote(5,"If you have no critics, you’ll likely have no success","Joseph Kuria",'"Malcolm X"'),
+    new Quote(1,"One day I will find the right words, and they will be simple","Paul Ngigi",'"Jack Kerouac"',
+      new Date(2019, 12, 12)),
+    new Quote(2,"Let me live, love, and say it well in good sentences","Ashley Wanjiru",'"Sylvia Plath"',
+      new Date(2021, 2, 2)),
+    new Quote(3,"The first draft is just you telling yourself the story","Stephen Kariuki",'"Terry Pratchett"',
+      new Date(2020, 11, 11)),
+    new Quote(4,"Start before you’re ready","Mary Wangui",'"Steven Pressfield"', new Date(2021, 3, 28)),
+    new Quote(5,"If you have no critics, you’ll likely have no success","Joseph Kuria",'"Malcolm X"', 
+      new Date(2021, 1, 1)),
   ];
 
   toggleDetails(index: number){
